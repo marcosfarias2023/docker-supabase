@@ -34,7 +34,7 @@ export type UserCreateResponse = {
 
 export async function createUser({ protocol, endpoint, serviceApiKey, user }: UserCreateVariables) {
   const response = await post(
-    `${protocol}://${endpoint}/auth/v1/admin/users`,
+    `${protocol}://localhost:8000/auth/v1/admin/users`,
     {
       email: user.email,
       password: user.password,
